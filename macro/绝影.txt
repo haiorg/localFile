@@ -1,0 +1,5 @@
+/click [@party1,noexists]PlayerFrame RightButton
+/click [@party1,noexists]DropDownList1Button20
+/run ConvertToRaid()
+/stopmacro [group]
+/邀请 666

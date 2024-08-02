@@ -1,0 +1,8 @@
+#showtooltip 迅捷幽灵虎
+/stopmacro [combat]
+/run if not IsFlyableArea() or (GetZoneText() == "达拉然" and GetSubZoneText()~="克拉苏斯平台") then CastSpellByName("迅捷幽灵虎") else CastSpellByName("梦魇翡翠幼龙") end
+
+
+
+
+
