@@ -1,3 +1,11 @@
 #showtooltip [flyable]米米尔隆的头部;大型美酒节科多兽
 /stopmacro [combat]
 /run if not IsFlyableArea() or (GetZoneText() == "达拉然" and GetSubZoneText()~="克拉苏斯平台") then CastSpellByName("大型美酒节科多兽") else CastSpellByName("米米尔隆的头部") end
+
+
+#showtooltip [flyable]奥的灰烬;迅捷祖利安猛虎
+/stopmacro [combat]
+/run if not IsFlyableArea() or (GetZoneText() == "达拉然" and GetSubZoneText()~="克拉苏斯平台") then CastSpellByName("迅捷祖利安猛虎") else CastSpellByName("奥的灰烬") end
+
+#showtooltip
+/cast [@cursor][] 真言术·盾

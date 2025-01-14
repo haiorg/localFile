@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+	<script>
+		const jm = { name: "森金村", value: 5716, times: 0 };
+		const yy = { name: "银月城", value: 6128, times: 0 };
+		const lt = { name: "雷霆崖", value: 5704, times: 0 };
+		const ua = { name: "幽暗城", value: 12399, times: 0 };
+		const completeArr = ["yes"];
+
+		let arr = [jm, yy, lt, ua];
+		const sort = (a, b) => a.value - b.value;
+		const even = (obj) => obj.value < 21000;
+		const arrStr = (obj) =>
+			"&nbsp;&nbsp;&nbsp;&nbsp;" +
+			obj.name +
+			"&nbsp;&nbsp;累计&nbsp;" +
+			obj.times +
+			"&nbsp;个&nbsp;&nbsp;预计声望：" +
+			obj.value +
+			"<br/>";
+		let r = 0;
+		let day = 0;
+
+		while (arr.some(even)) {
+			const times = (r % 4) + 1;
+			// const newday = (r + 1) % 4;
+			const newday = Math.ceil((r + 1) / 4);
+			const completed =
+				completeArr[newday - 1] === "yes" ? ">>完成<<" : "========";
+			if (times === 1) {
+				document.body.innerHTML +=
+					"=============== 第" +
+					newday +
+					"天 " +
+					completed +
+					"==========<br/><br/>";
+			}
+			arr[0].value += 250;
+			arr[0].times += 1;
+			arr[1].value += 62;
+			arr[2].value += 62;
+			arr[3].value += 62;
+			if (times === 4) {
+				// document.body.innerHTML +=
+				// 	"&nbsp;&nbsp;&nbsp;&nbsp;第" + times + "次<br/>";
+				document.body.innerHTML += arrStr(arr[0]);
+				document.body.innerHTML += arrStr(arr[1]);
+				document.body.innerHTML += arrStr(arr[2]);
+				document.body.innerHTML += arrStr(arr[3]);
+			}
+			const newArr = arr.sort(sort);
+			arr = newArr;
+			if (times === 4) {
+				document.body.innerHTML += "<br/>";
+				day = newday;
+			}
+			r++;
+		}
+
+		document.body.innerHTML += arrStr(arr[0]);
+		document.body.innerHTML += arrStr(arr[1]);
+		document.body.innerHTML += arrStr(arr[2]);
+		document.body.innerHTML += arrStr(arr[3]);
+		document.body.innerHTML += "<br/>";
+	</script>
+</html>
