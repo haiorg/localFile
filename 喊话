@@ -1,20 +1,6 @@
 wcl 筛选boss 去掉烈焰巨兽741 霍迪尔751 弗蕾亚753 将军755
-encounterID!= 744 and encounterID!= 751 and encounterID!= 755
-encounterID!= 744 and encounterID!= 751 and encounterID!= 753 and encounterID!= 755
+encounterID!=744 and encounterID!=751 and encounterID!=755
+encounterID!=744 and encounterID!=751 and encounterID!=753 and encounterID!=755
 
-宝库 SM*3 DLY*3 LR FS SS DZ ZS QS*3 MS*2 DK*2
-18人 单天赋宝库 来220+ 进本天赋分配 或者无需 来DKT FQ 治疗 MMM 
-
-/2 10人NAXX 后二+双龙2+1 饰品3K已包 其他100/300 龙2K起拍 来防骑/DKT =1
-/3 10人NAXX 后二+双龙2+1 饰品3K已包 其他100/300 龙2K起拍 来防骑/DKT =1
-/6 10人NAXX 后二+双龙2+1 饰品3K已包 其他100/300 龙2K起拍 来防骑/DKT =1
-
-10黑龙 周长 0龙 全Roll 来 DPS
-
-1、犯错罚款500G，不灭团不罚款。提前开BOSS罚500。
-2、WCI考核，低于DPS第二名65%半工资，低于60%无工资（BOSS数据，除一号、霍迪尔、三树、将军以外的数据）其中KBZ、CJQ、恶魔、鸟D、战斗DZ、AM考核降低5%
-3、拆解的火花伤害前四名各补贴300G
-4、有团双，T补1500，N补800，DPS前3补1500，前4-6补1K，鱼补300，修星1K，恶魔补1K，战斗盗贼/增强各补500，打破甲补500.
-5、消费1万抵30万伤害，只适用于考核，不能用于DPS前6排名。
-7、不足4W均分
-6、BOSS战中要求吃喝合剂、爆发药水或生存药水，因DPS不足会罚款。
+诺森德猛兽629 加拉克苏斯大王633 阵营冠军637 瓦格里双子641 阿努巴拉克645 奥妮克希亚1084 火焰看守者科拉隆776
+encounterID!=629 and encounterID!=633 and encounterID!=637 and encounterID!=641 and encounterID!=645
