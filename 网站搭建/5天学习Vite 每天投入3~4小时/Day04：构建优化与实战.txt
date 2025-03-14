@@ -1,0 +1,30 @@
+学习目标‌：掌握生产构建技巧
+
+1、构建优化（2h）：
+
+  // vite.config.js
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          lodash: ['lodash'],
+          react: ['react', 'react-dom']
+        }
+      }
+    }
+  }
+
+2、CSS工程化（1h）：
+
+  使用 CSS Modules：*.module.css 自动处理
+  集成 Sass/Less：
+
+    npm install sass
+
+3、实战项目‌（2h）：
+
+  开发一个 Todo List 应用：
+    组件化开发
+    状态管理
+    API 请求封装

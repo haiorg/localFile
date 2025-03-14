@@ -1,0 +1,10 @@
+1、创建Docker容器
+# 在项目根目录
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=mydb -p 3306:3306 -d mysql:8.0
+
+2、初始化表结构
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL
+);

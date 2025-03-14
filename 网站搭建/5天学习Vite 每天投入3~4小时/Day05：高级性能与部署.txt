@@ -1,0 +1,17 @@
+学习目标‌：掌握高级特性和部署流程
+
+1‌、动态导入‌（1h）：
+
+  const HeavyComponent = lazy(() => import('./HeavyComponent'))
+‌
+2、SSR 初探‌（1h）：
+
+  使用 vite-ssr 插件快速实现服务端渲染
+
+3‌、部署实战‌（2h）：
+
+  # 静态部署（GitHub Pages/Vercel）
+  npm run build
+  # Docker 部署
+  FROM nginx:alpine
+  COPY dist /usr/share/nginx/html

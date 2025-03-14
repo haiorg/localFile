@@ -1,0 +1,15 @@
+学习目标‌：结合主流框架实战
+
+1、React 项目（2h）：
+
+  使用 @vitejs/plugin-react 的 Fast Refresh 特性
+  集成状态管理（示例：Zustand）：
+
+    npm install zustand
+
+2、Vue 项目（2h）：
+
+  单文件组件（SFC）的快速编译
+  组合式 API + Pinia 状态管理：
+
+    npm install pinia @pinia/vite-plugin

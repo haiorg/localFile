@@ -1,0 +1,34 @@
+学习目标‌：掌握常用配置和插件
+
+1、基础配置（1.5h）：
+
+  别名配置（替代 Webpack 的 resolve.alias）：
+  
+    resolve: {
+      alias: { '@': path.resolve(__dirname, 'src') }
+    }
+
+代理配置（解决跨域）：
+
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  }
+
+2、核心插件（2h）：
+
+  npm install @vitejs/plugin-vue @vitejs/plugin-react @vitejs/plugin-legacy
+
+  框架插件：Vue/React/Svelte 支持
+  浏览器兼容插件（@vitejs/plugin-legacy）
+  手动实现一个打印构建耗时的插件：
+
+    export default function myPlugin() {
+      return {
+        name: 'log-build-time',
+        closeBundle() {
+          console.log('Build completed!')
+        }
+      }
+    }

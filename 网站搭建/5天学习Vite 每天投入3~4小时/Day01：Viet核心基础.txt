@@ -1,0 +1,26 @@
+‌学习目标‌：理解 Vite 核心优势，创建第一个项目
+
+1‌、核心概念‌（1h）：
+
+  对比 Webpack：为什么 Vite 更快（ESM 原生支持、预打包依赖）
+  冷启动速度对比（用 create-react-app vs vite 创建项目实测）
+  热更新（HMR）原理图解
+
+2、快速上手（2h）：
+
+  # 创建项目（任选框架）
+  npm create vite@latest my-project -- --template react
+  npm create vite@latest my-project -- --template vue
+
+  项目结构解析：vite.config.js、index.html 的特殊性
+  开发命令：dev/build/preview
+  修改 vite.config.js 实现端口配置：
+
+    export default defineConfig({
+      server: { port: 8080 }
+    })
+
+3、环境变量（1h）：
+
+  .env 文件的使用规则（VITE_ 前缀）
+  代码中访问：import.meta.env.VITE_API_URL
