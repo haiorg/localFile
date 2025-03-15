@@ -1,0 +1,2 @@
+.env 文件的使用规则（VITE_ 前缀）
+代码中访问：import.meta.env.VITE_API_URL

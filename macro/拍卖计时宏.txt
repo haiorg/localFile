@@ -1,0 +1,51 @@
+
+/run local t,c,i=10,0,0 if not F then F=CreateFrame("Frame")F:RegisterEvent("CHAT*MSG_RAID")F:RegisterEvent("CHAT_MSG_RAID_WARNING")F:SetScript("OnEvent",function(*,\_,msg) if msg:match("^[%d ０-９]|等|[=＝]") then if c>0 then SendChatMessage(">> 倒计时被 "..msg.." 中断 <<","raid_warning") c=0 end end end)end if c<1 then c=1 SendChatMessage(">> 开始 "..t.."秒倒计时 <<","raid_warning")i=t repeat C_Timer.After(1,function()i=i-1 if c>0 and i>0 then SendChatMessage(i.."秒","raid_warning")end end)until i<=0 if c>0 then SendChatMessage(">> 倒计时结束 <<","raid_warning")end c=0 else c=0 end
+
+-- 适用版本：正式服/怀旧服
+-- 功能：支持被特定格式消息打断的团队警告倒计时
+
+local timerRef, isRunning = nil, false
+
+-- 事件处理器
+local function OnChatMsg(_, msg, sender, _, \_, channel)
+if (channel == "RAID" or channel == "INSTANCE_CHAT") then
+if msg:match("^[%d ０-９]|等|[=＝]") and sender ~= UnitName("player") then
+if timerRef then
+timerRef:Cancel()
+timerRef = nil
+SendChatMessage(">> 倒计时被【"..sender.."】的消息中断 <<", channel)
+isRunning = false
+end
+end
+end
+end
+
+-- 主逻辑
+local function StartCountdown(duration)
+if isRunning then return end
+isRunning = true
+
+    duration = tonumber(duration) or 10 -- 默认10秒
+    local remaining = duration
+
+    -- 注册事件监听
+    local eventFrame = CreateFrame("Frame")
+    eventFrame:RegisterEvent("CHAT_MSG_RAID")
+    eventFrame:RegisterEvent("CHAT_MSG_INSTANCE_CHAT")
+    eventFrame:SetScript("OnEvent", OnChatMsg)
+
+    timerRef = C_Timer.NewTicker(1, function()
+        remaining = remaining - 1
+        if remaining <= 0 then
+            SendChatMessage(">> 行动开始！ <<", "RAID_WARNING")
+            eventFrame:UnregisterAllEvents()
+            isRunning = false
+        else
+            SendChatMessage(format(">> %d秒后行动 <<", remaining), "RAID_WARNING")
+        end
+    end, duration)
+
+end
+
+-- 创建宏命令
+/run StartCountdown(10) -- 将数字改为需要的秒数

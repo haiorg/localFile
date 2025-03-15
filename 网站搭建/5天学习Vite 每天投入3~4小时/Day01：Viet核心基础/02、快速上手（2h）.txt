@@ -1,0 +1,11 @@
+  # 创建项目（任选框架）
+  npm create vite@latest my-project -- --template react
+  npm create vite@latest my-project -- --template vue
+
+  项目结构解析：vite.config.js、index.html 的特殊性
+  开发命令：dev/build/preview
+  修改 vite.config.js 实现端口配置：
+
+    export default defineConfig({
+      server: { port: 8080 }
+    })
