@@ -25,3 +25,4 @@
 巫妖王 856
 
 encounterID!=847 and encounterID!=852
+encounterID!=854
