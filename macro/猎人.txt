@@ -1,0 +1,62 @@
+#showtooltip
+/cast [@focus,exists,help,nodead][@pet,nodead][] 误导
+
+#showtooltip 宁神射击
+/cast [@focus,harm,exists][harm,@mouseover][] 宁神射击
+
+#showtooltip
+/cast []
+
+#showtooltip 爆炸射击
+/startattack
+/castsequence reset=2,target 爆炸射击, 爆炸射击(等级 3)
+/use 10
+
+#showtooltip 陷阱发射器：爆炸陷阱(等级 1)
+/cast [@cursor] 陷阱发射器：爆炸陷阱(等级 1)
+/cast [@cursor] 萨隆邪铁炸弹
+
+#showtooltip 爆炸射击
+/cast 狂怒之嚎
+/cast !自动射击
+/castsequence reset=2,target 爆炸射击,爆炸射击(等级 3)
+/cast 杀戮命令
+/use 10
+/施放 凤凰之心
+
+#showtooltip 
+/cast 急速射击
+/cast 狂暴(种族特长)
+
+#showtooltip 杀戮射击
+/targetlastenemy
+/cast 杀戮射击
+/use 10
+/script UIErrorsFrame:Clear()
+
+#showtooltip 乱射
+/cast [@cursor] 萨隆邪铁炸弹
+/cast [@cursor,nochanneling:乱射] 乱射
+
+#showtooltip 乱射
+/cast [@cursor] 乱射
+
+/use 15
+/run MouselookStart()
+/run RunNextFrame(function() MouselookStop() end)
+/castsequence reset=5 !龙鹰守护,逃脱
+
+#showtooltip 爆炸陷阱(等级 6)
+/cast 爆炸陷阱(等级 6)
+/cast 逃脱
+
+#showtooltip 稳固射击
+/castsequence !自动射击
+/targetenemy [noharm][dead]
+/castsequence 稳固射击,稳固射击
+/cast [target=pettarget,exists]杀戮命令
+
+#showtooltip 
+/cast 野性呼唤
+/cast 急速射击
+/use 10
