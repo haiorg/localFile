@@ -12,7 +12,7 @@
 776  火焰看守者科拉隆
 
 845 玛洛加尔领主 
-846 亡语者女士 
+846 亡语者女士
 847 冰冠冰川炮舰 
 848 死亡使者萨鲁法尔 
 849 烂肠 
@@ -23,6 +23,3 @@
 854 踏梦者瓦莉瑟瑞娅 
 855 辛达苟萨 
 856 巫妖王 
-
-encounterID!=846 and encounterID!=847 and encounterID!=852 and encounterID!=854 and encounterID!=853
-encounterID!=854

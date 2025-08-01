@@ -1,3 +1,9 @@
-#showtooltip 迅捷祖利安猛虎
+#showtooltip 熔岩幼龙
 /stopmacro [combat]
-/run if not IsFlyableArea() or (GetZoneText() == "达拉然" and GetSubZoneText()~="克拉苏斯平台") then CastSpellByName("迅捷幽灵虎") else CastSpellByName("天缚幽灵虎") end
+/run if not IsFlyableArea() or (GetZoneText() == "达拉然" and GetSubZoneText()~="克拉苏斯平台") then CastSpellByName("迅捷祖利安猛虎") else CastSpellByName("铁锈始祖幼龙") end
+
+
+
+
+#showtooltip
+/run local t=GetTime() if t-lastShout>15 then lastShout=t SendChatMessage("测试宏", "ra") end
