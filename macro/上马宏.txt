@@ -7,3 +7,16 @@
 
 #showtooltip
 /run local t=GetTime() if t-lastShout>15 then lastShout=t SendChatMessage("测试宏", "ra") end
+
+
+#showtooltip 迅捷幽灵虎
+/cast 纯血火鹰
+/cast 奥利瑟拉佐尔的烈焰之爪
+/大喊  上马宏 刷屏见谅！
+/3 上马宏 刷屏见谅！
+/1
+
+
+#showtooltip 迅捷幽灵虎
+/stopmacro [combat]
+/run if isIndoors() and UnitClass("player") == "猎人" then CastSpellByName("猎豹守护") else  CastSpellByName("卡鲁亚克鲸须风筝") end

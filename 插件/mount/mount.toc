@@ -1,0 +1,8 @@
+## Interface: 38000
+## Author: 悬壶
+## Version: v0.0.1
+## SavedVariables: 
+## Title: mounts - Titan
+## Notes: friendly mount
+## Title-zhCN: 上马插件
+## Notes-zhCN: 快速选择可用坐骑的插件

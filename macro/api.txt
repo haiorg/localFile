@@ -1,0 +1,282 @@
+system AccountInfo (C_AccountInfo)
+system AccountStore (C_AccountStore)
+system AchievementInfo (C_AchievementInfo)
+system AchievementTelemetry (C_AchievementTelemetry)
+system ActionBar (C_ActionBar)
+system AddOnProfiler (C_AddOnProfiler)
+system AddOns (C_AddOns)
+system AdventureJournal (C_AdventureJournal)
+system AdventureMap (C_AdventureMap)
+system AreaPoiInfo (C_AreaPoiInfo)
+system ArenaTeam
+system AssistedCombat (C_AssistedCombat)
+system AuctionHouse (C_AuctionHouse)
+system AzeriteEmpoweredItem (C_AzeriteEmpoweredItem)
+system AzeriteEssence (C_AzeriteEssence)
+system AzeriteItem (C_AzeriteItem)
+system BagIndexConstants
+system Bank (C_Bank)
+system BarberShop (C_BarberShop)
+system BarberShop (C_BarberShopInternal)
+system BattleNet (C_BattleNet)
+system BattlePet (C_BattlePet)
+system BehavioralMessaging (C_BehavioralMessaging)
+system BlackMarketInfo (C_BlackMarketInfo)
+system Browser (C_Browser)
+system Build
+system CVarScripts (C_CVar)
+system Calendar (C_Calendar)
+system Camera
+system CatalogShop (C_CatalogShop)
+system ChallengeModeInfo (C_ChallengeMode)
+system ChatBubbles (C_ChatBubbles)
+system ChatInfo (C_ChatInfo)
+system Cinematic
+system ClassTrial (C_ClassTrial)
+system Client
+system ClientScene (C_ClientScene)
+system Club (C_Club)
+system ClubFinderInfo (C_ClubFinder)
+system ColorOverrides (C_ColorOverrides)
+system CombatLog (C_CombatLog)
+system CommentatorFrame (C_Commentator)
+system CompactUnitFrames (C_CompactUnitFrames)
+system ConfigurationWarnings (C_ConfigurationWarnings)
+system ConnectionScript
+system Console
+system ConsoleScriptCollection (C_ConsoleScriptCollection)
+system Container (C_Container)
+system ContributionCollector (C_ContributionCollector)
+system CooldownViewer (C_CooldownViewer)
+system CraftInfo (C_CraftInfo)
+system CreatureInfo (C_CreatureInfo)
+system CurrencySystem (C_CurrencyInfo)
+system Cursor (C_Cursor)
+system CursorUtil (C_CursorUtil)
+system DateAndTime (C_DateAndTime)
+system DeathAlert (C_DeathAlert)
+system DeathInfo (C_DeathInfo)
+system DebugToggle
+system Deprecated_11_0_0 (C_Deprecated)
+system DuelInfo (C_DuelInfo)
+system EditModeManager (C_EditMode)
+system EncodingUtil (C_EncodingUtil)
+system EncounterInfo (C_EncounterInfo)
+system EncounterJournal (C_EncounterJournal)
+system EndOfMatchUI (C_EndOfMatchUI)
+system EngravingInfo (C_Engraving)
+system EquipmentSet (C_EquipmentSet)
+system EventSchedulerUI (C_EventScheduler)
+system EventUtils (C_EventUtils)
+system Expansion
+system ExpansionInfo
+system ExternalEventURL (C_ExternalEventURL)
+system FogOfWar (C_FogOfWar)
+system Font
+system FrameAPIArchaeologyDigSiteFrame
+system FrameAPIBlob
+system FrameAPICharacterModelBase
+system FrameAPICinematicModel
+system FrameAPICooldown
+system FrameAPIDressUpModel
+system FrameAPIFogOfWarFrame
+system FrameAPIModelSceneFrame
+system FrameAPIModelSceneFrameActor
+system FrameAPIModelSceneFrameActorBase
+system FrameAPIQuestPOI
+system FrameAPISimpleCheckout
+system FrameAPITabardModel
+system FrameAPITabardModelBase
+system FrameAPIUnitPositionFrame
+system FrameScript
+system FriendList (C_FriendList)
+system GMTicketInfo (C_GMTicketInfo)
+system GameCursor
+system GameError
+system GamePad (C_GamePad)
+system GameRules (C_GameRules)
+system GameUI
+system GenericWidgetDisplay (C_GenericWidgetDisplay)
+system Glue (C_Glue)
+system GlyphInfo (C_GlyphInfo)
+system GossipInfo (C_GossipInfo)
+system GuildBank (C_GuildBank)
+system GuildInfo (C_GuildInfo)
+system HeirloomInfo (C_HeirloomInfo)
+system ImmersiveInteraction (C_ImmersiveInteraction)
+system Input
+system Instance
+system InstanceEncounter (C_InstanceEncounter)
+system InterfaceFileManifest (C_InterfaceFileManifest)
+system Item (C_Item)
+system ItemSocketInfo (C_ItemSocketInfo)
+system ItemText (C_ItemText)
+system ItemUpgrade (C_ItemUpgrade)
+system KeyBindings (C_KeyBindings)
+system LFGInfo (C_LFGInfo)
+system LFGList (C_LFGList)
+system LFGListRoles (C_LFGListRoles)
+system LoadingScreen (C_LoadingScreen)
+system LobbyMatchmakerInfo (C_LobbyMatchmakerInfo)
+system Locale
+system Localization
+system Log (C_Log)
+system Loot (C_Loot)
+system LossOfControl (C_LossOfControl)
+system LuaTableUtil (table)
+system MacOptions (C_MacOptions)
+system MailInfo (C_Mail)
+system MapExplorationInfo (C_MapExplorationInfo)
+system MapUI (C_Map)
+system MerchantFrame (C_MerchantFrame)
+system Minimap (C_Minimap)
+system MinimapFrameAPI
+system MirrorTimer
+system ModelInfo (C_ModelInfo)
+system MountJournal (C_MountJournal)
+system Movie
+system MythicPlusInfo (C_MythicPlus)
+system NamePlateManager (C_NamePlateManager)
+system NewItems (C_NewItems)
+system Os
+system PaperDollInfo (C_PaperDollInfo)
+system ParentalControls
+system PartyInfo (C_PartyInfo)
+system PartyPose (C_PartyPose)
+system PerformanceScript
+system PetBattles (C_PetBattles)
+system PetInfo (C_PetInfo)
+system PetJournalInfo (C_PetJournal)
+system PingManager (C_Ping)
+system PingManagerSecure (C_PingSecure)
+system PingPinFrameAPI
+system Platform (C_Platform)
+system PlayerInfo (C_PlayerInfo)
+system PlayerInteractionManager (C_PlayerInteractionManager)
+system PlayerLocationInfo (C_PlayerInfo)
+system PlayerScript
+system Pony (C_Pony)
+system Portrait
+system PvpInfo (C_PvP)
+system QuestChoice (C_QuestChoice)
+system QuestInfoSystem (C_QuestInfoSystem)
+system QuestLineUI (C_QuestLine)
+system QuestLog (C_QuestLog)
+system QuestOffer (C_QuestOffer)
+system QuestSession (C_QuestSession)
+system QuestTaskInfo (C_TaskQuest)
+system RaidLocks (C_RaidLocks)
+system RecentAllies (C_RecentAllies)
+system RecruitAFriend (C_RecruitAFriend)
+system Reforge (C_Reforge)
+system RemixArtifactUI (C_RemixArtifactUI)
+system ReportSystem (C_ReportSystem)
+system ReputationInfo (C_Reputation)
+system ResearchInfo (C_ResearchInfo)
+system RestrictedActions
+system ScenarioInfo (C_ScenarioInfo)
+system Screen
+system ScriptWarnings (C_ScriptWarnings)
+system ScriptedAnimations (C_ScriptedAnimations)
+system SeasonsScripts (C_Seasons)
+system SecureTransfer (C_SecureTransfer)
+system SharedTraits (C_Traits)
+system SimpleAnimAPI
+system SimpleAnimAlphaAPI
+system SimpleAnimFlipBookAPI
+system SimpleAnimGroupAPI
+system SimpleAnimPathAPI
+system SimpleAnimRotationAPI
+system SimpleAnimScaleAPI
+system SimpleAnimScaleLineAPI
+system SimpleAnimTextureCoordTranslationAPI
+system SimpleAnimTranslationAPI
+system SimpleAnimTranslationLineAPI
+system SimpleAnimVertexColorAPI
+system SimpleAnimatableObjectAPI
+system SimpleBrowserAPI
+system SimpleButtonAPI
+system SimpleCheckboxAPI
+system SimpleColorSelectAPI
+system SimpleControlPointAPI
+system SimpleEditBoxAPI
+system SimpleFontAPI
+system SimpleFontStringAPI
+system SimpleFrameAPI
+system SimpleFrameScriptObjectAPI
+system SimpleHTMLAPI
+system SimpleLineAPI
+system SimpleMaskTextureAPI
+system SimpleMessageFrameAPI
+system SimpleModelAPI
+system SimpleModelFFXAPI
+system SimpleMovieAPI
+system SimpleObjectAPI
+system SimpleOffScreenFrameAPI
+system SimpleRegionAPI
+system SimpleScriptRegionAPI
+system SimpleScriptRegionResizingAPI
+system SimpleScrollFrameAPI
+system SimpleSliderAPI
+system SimpleStatusBarAPI
+system SimpleTextureAPI
+system SimpleTextureBaseAPI
+system SkillInfo (C_SkillInfo)
+system SlashCommand
+system SocialQueue (C_SocialQueue)
+system SocialRestrictions (C_SocialRestrictions)
+system Sound (C_Sound)
+system SpecializationInfo (C_SpecializationInfo)
+system SpecializationShared
+system Spell (C_Spell)
+system SpellActivationOverlay (C_SpellActivationOverlay)
+system SpellBook (C_SpellBook)
+system StableInfo (C_StableInfo)
+system StorePublic (C_StorePublic)
+system Streaming
+system StringUtil
+system SummonInfo (C_SummonInfo)
+system SystemInfo (C_System)
+system SystemTime
+system TTSSettings (C_TTSSettings)
+system TargetScript
+system TaxiMap (C_TaxiMap)
+system TextureUtils (C_Texture)
+system Threat
+system Title
+system TooltipComparison (C_TooltipComparison)
+system TooltipInfo (C_TooltipInfo)
+system Totem
+system ToyBoxInfo (C_ToyBoxInfo)
+system TradeInfo (C_TradeInfo)
+system TradeSkillUI (C_TradeSkillUI)
+system Trainer (C_Trainer)
+system TraitConfig (C_TraitConfig)
+system Transmogrify (C_Transmog)
+system TransmogrifyCollection (C_TransmogCollection)
+system TransmogrifySets (C_TransmogSets)
+system Tutorial (C_Tutorial)
+system UI (C_UI)
+system UIActionHandlerSystem (C_UIActionHandler)
+system UIColor (C_UIColor)
+system UIEventToastManagerInfo (C_EventToastManager)
+system UIMacros (C_Macro)
+system UISystemVisibilityManager (C_SystemVisibilityManager)
+system UITimer (C_Timer)
+system UIWidgetManager (C_UIWidgetManager)
+system URL
+system Unit
+system UnitAuras (C_UnitAuras)
+system UnitRole
+system UserFeedback (C_UserFeedback)
+system Vehicle (C_Vehicle)
+system Video (C_VideoOptions)
+system Vignette (C_VignetteInfo)
+system VoiceChat (C_VoiceChat)
+system WorldLootObject (C_WorldLootObject)
+system WorldStateInfo (C_WorldStateInfo)
+system WowEntitlementInfo (C_WowEntitlementInfo)
+system WowSurvey (C_WowSurvey)
+system WowTokenUI (C_WowTokenUI)
+system XMLUtil (C_XMLUtil)
+system ZoneScript

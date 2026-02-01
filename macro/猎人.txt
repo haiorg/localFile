@@ -1,13 +1,13 @@
 #showtooltip
-/cast [@focus,exists,help,nodead][@pet,nodead][] 误导
+/cast [@focus,exists,help,nodead][@pet,exists,nodead][] 误导
 
-#showtooltip 宁神射击
-/cast [@focus,harm,exists][harm,@mouseover][] 宁神射击
+#showtooltip
+/cast [@focus,harm,exists][] 宁神射击
 
 #showtooltip
 /cast []
 
-#showtooltip 爆炸射击
+#showtooltip
 /startattack
 /castsequence reset=2,target 爆炸射击, 爆炸射击(等级 3)
 /use 10
@@ -60,3 +60,27 @@
 /cast 野性呼唤
 /cast 急速射击
 /use 10
+
+
+
+#showtooltip
+/castsequence reset=combat 寒冰宝珠,寒冰宝珠,冰锥术,寒冰宝珠,寒冰宝珠,冰霜新星
+
+/swapactionbar 1 2
+/castsequence [actionbar:2] 猎豹守护,野性守护;
+/castsequence 雄鹰守护,蝰蛇守护
+/cast 灵猴守护
+
+
+#showtooltip
+/cleartarget
+/targetexact 阿克图瑞斯
+/targetexact 洛卡纳哈
+/targetexact 古德利亚
+/targetexact 逐日
+/stopmacro [noexists]
+/castsequence reset=30 奥术射击,冰冻陷阱,驯服野兽 
+
+
+#showtooltip
+/cast 摔绊

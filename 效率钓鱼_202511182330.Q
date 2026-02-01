@@ -1,0 +1,161 @@
+[General]
+SyntaxVersion=2
+BeginHotkey=112
+BeginHotkeyMod=0
+PauseHotkey=0
+PauseHotkeyMod=0
+StopHotkey=115
+StopHotkeyMod=0
+RunOnce=1
+EnableWindow=
+MacroID=701c88dd-d43c-4d65-8f9a-b0bbdfb023fd
+Description=钓鱼
+Enable=1
+AutoRun=0
+[Repeat]
+Type=0
+Number=1
+[SetupUI]
+Type=2
+QUI=
+[Relative]
+SetupOCXFile=
+[Comment]
+该脚本使用“区域找色”“音效收杆”的原理控制
+
+1、钓鱼监测区域和音量监测根据使用情况自定义设置
+
+2、鱼漂颜色和音量颜色应该根据使用情况自定义设置
+
+[Script]
+SetSimMode 2
+
+//创建随机延时器
+Function RandomDelay(min,max)
+	Randomize
+	RandomDelay = Int((max - min + 1) * Rnd + min)
+	Delay RandomDelay
+End Function
+
+// 收杆跳几下
+Function Jumps(min, max)
+	Randomize
+	跳跃次数 = Int((max - min + 1) * Rnd + min)
+	For i = 1 To 跳跃次数
+    	KeyPress "Space", 1  // 按下空格键
+    	Delay 1000           // 每次按键间隔100毫秒
+	Next
+End Function
+
+// 寻找鱼漂
+Function 寻找鱼漂
+	
+	// 如果区域内有鱼漂 则移动鼠标到 鱼漂
+	FindColorEx 368,161,1614,669,"2036AB",0,0.8,intX,intY
+	If intX > 0 And intY > 0 Then 
+		TracePrint "1, 找到鱼漂"
+		
+		// 延时0.3s - 1.3s
+		RandomDelay 300, 1300
+		
+		// 移动鼠标
+		MoveTo intX, intY
+		
+		Call 等待收杆
+	Else 
+	
+		FindColorEx 368,161,1614,669,"1D1F75",0,0.8,intX,intY
+		If intX > 0 And intY > 0 Then 
+			TracePrint "2, 找到鱼漂"
+			
+			// 延时0.3s - 1.3s
+			RandomDelay 300, 1300
+			
+			// 移动鼠标
+			MoveTo intX, intY
+			
+			Call 等待收杆
+		Else 
+	
+			FindColorEx 368,161,1614,669,"5A669D",0,0.8,intX,intY
+			If intX > 0 And intY > 0 Then 
+				TracePrint "3, 找到鱼漂"
+				
+				// 延时0.3s - 1.3s
+				RandomDelay 300, 1300
+				
+				// 移动鼠标
+				MoveTo intX, intY
+				
+				Call 等待收杆
+			Else 
+	
+				FindColorEx 368,161,1614,669,"0A105B",0,0.8,intX,intY
+				If intX > 0 And intY > 0 Then 
+					TracePrint "4, 找到鱼漂"
+					
+					// 延时0.3s - 1.3s
+					RandomDelay 300, 1300
+					
+					// 移动鼠标
+					MoveTo intX, intY
+					
+					Call 等待收杆
+				Else 
+					// 随机延时0.3s - 1.3s
+					RandomDelay 300, 1300
+					
+					//
+					TracePrint "未找到鱼漂"
+				End If
+			End If
+		End If
+	End If
+			
+End Function
+
+// 等待收杆
+Function 等待收杆
+
+	Do
+
+		// 如果钓到鱼触发音效
+		FindColorEx 1853,908,1877,950,"33A733",0,0.9,intX1,intY1
+		If intX1 > 0 And intY1 > 0 Then 
+		
+			RandomDelay 200, 800
+			// 按下鼠标右键 收杆
+			RightClick 1
+			
+			Delay 1000
+			
+			// 跳几下 防止暂离
+			Jumps 0, 2
+			
+			// 延时1-5秒
+			RandomDelay 1000, 5000
+			
+			Exit Do
+	
+		End If
+	Loop
+End Function
+
+
+// 主循环
+Do
+//	Rem rodout
+
+	// 按下钓鱼键开始钓鱼
+	KeyDown "3", 1
+	RandomDelay 50, 500
+	KeyUp "3", 1
+	
+	// 延时0.8s - 1.5s
+	RandomDelay 800, 1500
+	
+	Call 寻找鱼漂
+	
+//	Goto rodout
+
+Loop
